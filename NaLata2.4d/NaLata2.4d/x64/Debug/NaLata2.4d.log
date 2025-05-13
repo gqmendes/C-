@@ -1,5 +1,5 @@
 ﻿  NaLata2.4d.cpp
 C:\Users\gicel\source\repos\gqmendes\C-\NaLata2.4d\NaLata2.4d.cpp(83,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\gicel\source\repos\gqmendes\C-\NaLata2.4d\NaLata2.4d.cpp(748,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\gicel\source\repos\gqmendes\C-\NaLata2.4d\NaLata2.4d.cpp(759,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gicel\source\repos\gqmendes\C-\NaLata2.4d\NaLata2.4d.cpp(757,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gicel\source\repos\gqmendes\C-\NaLata2.4d\NaLata2.4d.cpp(768,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
   NaLata2.4d.vcxproj -> C:\Users\gicel\source\repos\gqmendes\C-\NaLata2.4d\x64\Debug\NaLata2.4d.exe

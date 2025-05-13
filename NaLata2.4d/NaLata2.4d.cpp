@@ -526,8 +526,17 @@ void mostrarCarrinho()
     do 
     {
         cout << "\n[1] Finalizar compra\n[2] Cancelar e voltar ao menu\nEscolha: ";
-        cin >> opcao;
-        cin.ignore();
+        string input;
+        getline(cin, input);
+
+        if (input.empty()) 
+        {
+            cout << "Erro: Você deve digitar 1 ou 2!" << endl;
+			continue;
+        }
+
+        // Pega apenas o primeiro caractere digitado
+        opcao = input[0];
 
         if (opcao == '1') 
         {
@@ -593,7 +602,7 @@ void mostrarCarrinho()
         {
             cout << "Opção inválida! Digite 1 ou 2." << endl;
         }
-    } while (!entradaValida);
+    } while (!entradaValida );
 }
 
 // Fará o processamento do pagamento conforme solicitado no item 1-a-i-4 da Tarefa de Avaliação n.º 01

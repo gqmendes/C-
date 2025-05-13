@@ -14,11 +14,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
@@ -28,7 +32,7 @@
               "RelativeDocumentMoniker": "NaLata2.4d.cpp",
               "ToolTip": "C:\\Users\\gicel\\source\\repos\\gqmendes\\C-\\NaLata2.4d\\NaLata2.4d.cpp",
               "RelativeToolTip": "NaLata2.4d.cpp",
-              "ViewState": "AgIAAEIBAAAAAAAAAAAawLYAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAgCAAAAAAAAAAAwwBQCAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-10T09:07:38.676Z",
               "EditorCaption": ""
