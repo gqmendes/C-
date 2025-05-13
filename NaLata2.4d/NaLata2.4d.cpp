@@ -99,15 +99,18 @@ int main()
         
         string opcaoMenu = solicitarEntradaNumerica("Digite a opção desejada: ");
         bool entradaValida = true;
-        for (char c : opcaoMenu) {
-            if (!isdigit(c)) {
+        for (char c : opcaoMenu) 
+        {
+            if (!isdigit(c))
+            {
                 entradaValida = false;
                 break;
             }
         }
 
         int menuP = -1; // Valor padrão inválido
-        if (entradaValida && !opcaoMenu.empty()) {
+        if (entradaValida && !opcaoMenu.empty())
+        {
             menuP = stoi(opcaoMenu);
         }
 
@@ -228,18 +231,22 @@ void exibirProdutos()
 // Valida se o campo numérico recebe apenas números e não aceita números negativos
 bool validarNumeros(const string& str)
 {
-    if (str.empty() || str[0] == '-') {
+    if (str.empty() || str[0] == '-') 
+    {
         return false; // Rejeita vazios e negativos
     }
 
     int pontos = 0; // Contador de pontos decimais
 
-    for (char c : str) {
-        if (c == '.') {
+    for (char c : str) 
+    {
+        if (c == '.') 
+        {
             pontos++;
             if (pontos > 1) return false; // Mais de um ponto é inválido
         }
-        else if (!isdigit(c)) {
+        else if (!isdigit(c)) 
+        {
             return false; // Rejeita caracteres não numéricos
         }
     }
@@ -251,11 +258,13 @@ bool validarNumeros(const string& str)
 string solicitarEntradaNumerica(const string& mensagem)
 {
     string entrada;
-    while (true) {
+    while (true)
+    {
         cout << mensagem;
         getline(cin, entrada);
 
-        if (validarNumeros(entrada)) {
+        if (validarNumeros(entrada)) 
+        {
             return entrada;
         }
         cout << "Entrada inválida! Por favor, use apenas números.\n";
@@ -295,9 +304,11 @@ void adicionarProduto()
         {
             precoCustoStr = solicitarEntradaNumerica("Digite o preço de custo: € ");
            
-            if (validarNumeros(precoCustoStr)) {
+            if (validarNumeros(precoCustoStr))
+            {
                 double precoCusto = stringParaDouble(precoCustoStr);
-                if (precoCusto > 0) {
+                if (precoCusto > 0)
+                {
                     estoque[totalProdutos][3] = precoCustoStr;
                     break;
                 }
@@ -368,18 +379,21 @@ void venderProdutos()
         else
         {
             int quantidadeDisponivel = stoi(estoque[indice][2]);
-            if (quantidadeDisponivel == 0) {
+            if (quantidadeDisponivel == 0) 
+            {
                 cout << "Produto esgotado!" << endl;
                 cout << "Deseja escolher outro ? (s / n) : ";
                 //char opcao;
                 cin >> continuar;
                 cin.ignore();
 
-                if (continuar == 's' || continuar == 'S') {
+                if (continuar == 's' || continuar == 'S') 
+                {
                     continuar = 's';
                     continue;
                 }
-                else {
+                else 
+                {
                     continuar = 'n';
                     break;
                 }
@@ -387,17 +401,21 @@ void venderProdutos()
             int quantidadeDesejada;
             bool quantidadeValida = false;
 
-            do {
+            do 
+            {
                 strQuantidade = solicitarEntradaNumerica("Quantidade (disponível: " + to_string(quantidadeDisponivel) + "): ");
                 quantidadeDesejada = stoi(strQuantidade);
 
-                if (quantidadeDesejada <= 0) {
+                if (quantidadeDesejada <= 0) 
+                {
                     cout << "Erro: A quantidade deve ser maior que zero!" << endl;
                 }
-                else if (quantidadeDesejada > quantidadeDisponivel) {
+                else if (quantidadeDesejada > quantidadeDisponivel) 
+                {
                     cout << "Quantidade indisponível! Máximo disponível: " << quantidadeDisponivel << endl;
                 }
-                else {
+                else 
+                {
                     quantidadeValida = true;
                 }
             } while (!quantidadeValida);
@@ -505,33 +523,39 @@ void mostrarCarrinho()
     char opcao;
     bool entradaValida = false;
 
-    do {
+    do 
+    {
         cout << "\n[1] Finalizar compra\n[2] Cancelar e voltar ao menu\nEscolha: ";
         cin >> opcao;
         cin.ignore();
 
-        if (opcao == '1') {
+        if (opcao == '1') 
+        {
             int sorteio = rand() % 2;
             bool compraGratis = (sorteio == 0);
 
-            if (compraGratis) {
+            if (compraGratis) 
+            {
                 cout << "# Parabéns! A sua compra é totalmente GRÁTIS!# " << endl;
                 totalCarrinho = 0.0;
                 pagamento = 0.0;
                 troco = 0.0;
                 processarPagamento();
             }
-            else {
+            else 
+            {
                 cout << "\nTotal a pagar (com IVA): € " << fValorMonetario(totalCarrinho) << endl;
 
                 bool valorValido = false;
                 string input;
 
-                while (!valorValido) {
+                while (!valorValido)
+                {
                     cout << "Valor entregue (ou 0 para cancelar): € ";
                     getline(cin, input);
 
-                    if (input == "0") {
+                    if (input == "0") 
+                    {
                         cout << "Compra cancelada!" << endl;
                         limparTela();
                         return;  // Volta ao menu principal
@@ -539,14 +563,16 @@ void mostrarCarrinho()
 
                     pagamento = stringParaDouble(input);
 
-                    if (pagamento == 0.0 && input != "0" && input != "0,00" && input != "0.00") {
+                    if (pagamento == 0.0 && input != "0" && input != "0,00" && input != "0.00") 
+                    {
                         cout << "Valor inválido! Use números com até 2 casas decimais." << endl;
                     }
-                    else if (pagamento < totalCarrinho) {
-                        cout << "Valor insuficiente! Digite um valor igual ou maior que € "
-                            << fValorMonetario(totalCarrinho) << endl;
+                    else if (pagamento < totalCarrinho) 
+                    {
+                        cout << endl << "Valor insuficiente! Digite um valor igual ou maior que € " << fValorMonetario(totalCarrinho) << endl;
                     }
-                    else {
+                    else 
+                    {
                         valorValido = true;
                     }
                 }
@@ -554,7 +580,8 @@ void mostrarCarrinho()
             }
             entradaValida = true;
         }
-        else if (opcao == '2') {
+        else if (opcao == '2') 
+        {
             cout << "Compra cancelada! Retornando ao menu principal..." << endl;
             // Reseta o carrinho
             itensCarrinho = 0;
@@ -562,7 +589,8 @@ void mostrarCarrinho()
             limparTela();
             return;  // Volta ao menu principal
         }
-        else {
+        else 
+        {
             cout << "Opção inválida! Digite 1 ou 2." << endl;
         }
     } while (!entradaValida);
@@ -571,10 +599,12 @@ void mostrarCarrinho()
 // Fará o processamento do pagamento conforme solicitado no item 1-a-i-4 da Tarefa de Avaliação n.º 01
 void processarPagamento()
 {
-    if (totalCarrinho > 0) {
+    if (totalCarrinho > 0) 
+    {
         troco = pagamento - totalCarrinho;
 
-        if (itensCarrinho < qtdVendas) {
+        if (itensCarrinho < qtdVendas) 
+        {
             vendas[itensCarrinho][5] = fValorMonetario(totalCarrinho);
             vendas[itensCarrinho][6] = fValorMonetario(pagamento);
             vendas[itensCarrinho][7] = fValorMonetario(troco);
@@ -584,7 +614,8 @@ void processarPagamento()
     cout << "\nProcessando pagamento..." << endl;
     cout << "Pagamento realizado com sucesso!" << endl;
 
-    if (troco > 0) {
+    if (troco > 0) 
+    {
         cout << "Troco: € " << fValorMonetario(troco) << endl;
     }
 
@@ -610,22 +641,27 @@ double stringParaDouble(const string& valorStr)
         char c = copia[i];
 
         // Permite sinal negativo apenas no início
-        if (i == 0 && c == '-') {
+        if (i == 0 && c == '-') 
+        {
             continue;
         }
 
         // Verifica caracteres válidos
-        if (!isdigit(c)) {
-            if (c == '.' && !pontoDecimalEncontrado) {
+        if (!isdigit(c))  
+        {
+            if (c == '.' && !pontoDecimalEncontrado) 
+            {
                 pontoDecimalEncontrado = true;
             }
-            else {
+            else 
+            {
                 caracterValido = false;
                 break;
             }
         }
     }
-    if (!caracterValido || copia.empty() || copia == "." || copia == "-") {
+    if (!caracterValido || copia.empty() || copia == "." || copia == "-") 
+    {
         return 0.0;
     }
 
@@ -634,7 +670,8 @@ double stringParaDouble(const string& valorStr)
     double valor = strtod(copia.c_str(), &endptr);
 
     // Verifica se a conversão foi completa
-    if (*endptr != '\0') {
+    if (*endptr != '\0') 
+    {
         return 0.0;
     }
 

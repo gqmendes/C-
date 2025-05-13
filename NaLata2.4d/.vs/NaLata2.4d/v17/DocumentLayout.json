@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PRI_TPSIP03.25\\5092\\NaLata2.4d\\",
+  "WorkspaceRootPath": "C:\\Users\\gicel\\source\\repos\\gqmendes\\C-\\NaLata2.4d\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83BCFAD6-30EE-4363-B9B7-9E8023BB9AE2}|NaLata2.4d.vcxproj|D:\\PRI_TPSIP03.25\\5092\\NaLata2.4d\\NaLata2.4d.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{83BCFAD6-30EE-4363-B9B7-9E8023BB9AE2}|NaLata2.4d.vcxproj|C:\\Users\\gicel\\source\\repos\\gqmendes\\C-\\NaLata2.4d\\NaLata2.4d.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{83BCFAD6-30EE-4363-B9B7-9E8023BB9AE2}|NaLata2.4d.vcxproj|solutionrelative:NaLata2.4d.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,17 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "NaLata2.4d.cpp",
-              "DocumentMoniker": "D:\\PRI_TPSIP03.25\\5092\\NaLata2.4d\\NaLata2.4d.cpp",
+              "DocumentMoniker": "C:\\Users\\gicel\\source\\repos\\gqmendes\\C-\\NaLata2.4d\\NaLata2.4d.cpp",
               "RelativeDocumentMoniker": "NaLata2.4d.cpp",
-              "ToolTip": "D:\\PRI_TPSIP03.25\\5092\\NaLata2.4d\\NaLata2.4d.cpp",
+              "ToolTip": "C:\\Users\\gicel\\source\\repos\\gqmendes\\C-\\NaLata2.4d\\NaLata2.4d.cpp",
               "RelativeToolTip": "NaLata2.4d.cpp",
-              "ViewState": "AgIAAAUDAAAAAAAAAAAAAB4DAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAawLYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-10T09:07:38.676Z",
               "EditorCaption": ""
