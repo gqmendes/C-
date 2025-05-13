@@ -1,0 +1,5 @@
+﻿  NaLata2.4d.cpp
+D:\PRI_TPSIP03.25\5092\NaLata2.4d\NaLata2.4d.cpp(83,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\PRI_TPSIP03.25\5092\NaLata2.4d\NaLata2.4d.cpp(772,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\PRI_TPSIP03.25\5092\NaLata2.4d\NaLata2.4d.cpp(783,23): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  NaLata2.4d.vcxproj -> D:\PRI_TPSIP03.25\5092\NaLata2.4d\x64\Debug\NaLata2.4d.exe
